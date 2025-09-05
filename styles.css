@@ -1,0 +1,225 @@
+/* Reset general */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body & Fondo */
+body {
+    font-family: Arial, sans-serif;
+    background: linear-gradient(to top, #003d5b, #e0f7fa); /* Degradado azul */
+    color: #333;
+    overflow-x: hidden;
+    height: 100%;
+}
+
+/* =======================
+   MENÚ FIJO
+   ======================= */
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-image: url('./img/menu.jpg');
+    background-size: cover;
+    background-position: 50% 60%;
+    background-repeat: no-repeat;
+    padding: 1rem;
+    z-index: 2000; /* ✅ siempre encima */
+    color: white;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.3);
+}
+
+.navbar ul {
+    display: flex;
+    justify-content: center;
+    list-style-type: none;
+}
+
+.navbar li {
+    margin: 0 20px;
+}
+
+.navbar a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.1rem;
+    padding: 8px 16px;
+    transition: background-color 0.3s;
+}
+
+.navbar a:hover {
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+/* =======================
+   LAYOUT EN DOS COLUMNAS
+   ======================= */
+.layout {
+    display: grid;
+    grid-template-columns: 40% 60%; /* Izquierda 20% - Derecha 80% */
+    height: 100vh;
+}
+
+/* Columna izquierda (imagen fija + texto) */
+.side-image {
+    background-image: url('./img/lateral.jpg'); /* 👉 cambia por tu imagen */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    position: sticky;
+    top: 0;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.overlay-text {
+    background: rgba(0, 0, 0, 0.5); /* Fondo semitransparente */
+    color: white;
+    padding: 1rem;
+    border-radius: 10px;
+    text-align: center;
+}
+
+/* Columna derecha (contenido con scroll) */
+.main-content {
+    overflow-y: auto;
+    height: 100vh;
+    background: white;
+    padding-top: 80px; /* margen para el menú fijo */
+}
+
+/* =======================
+   SECCIONES DE CONTENIDO
+   ======================= */
+.slide {
+    display: flex;
+    align-items: stretch;
+    justify-content: space-between;
+    padding: 4rem 2rem;
+    min-height: 100vh;
+    width: 80%;
+    margin: 0 auto;
+}
+
+#presentacion {
+    background-image:url("./img/presentacion.jpg") ;
+    background-size: cover;
+    background-position: center;  
+    background-repeat: no-repeat;
+    display: flex;              /* Habilita flexbox */
+    justify-content: center;    /* Centra horizontalmente */
+    align-items: center;        /* Centra verticalmente */
+    text-align: center;         /* Centra el texto dentro del contenedor */
+    min-height: 100vh; 
+}
+
+#presentacion p {
+    color: white
+}
+
+#presentacion .content h1{
+    font-family: 'Parisienne', cursive;
+    color: #0096c7;
+}
+
+#beneficios .content{
+    text-align: justify;
+}
+
+.content {
+    flex: 65%;
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.content h1, .content h2 {
+    color: #0155f0;
+}
+
+.content p {
+    font-size: 1.2rem;
+    line-height: 1.6;
+    margin-top: 1rem;
+    text-align: justify;
+}
+
+.image {
+    flex: 35%;
+    display: flex;
+    align-items: stretch;
+    justify-content: center;
+}
+
+.image img {
+    width: 100%;
+    max-width: 300px;
+    object-fit: cover;
+    border-radius: 0;
+}
+
+
+/* Botón */
+.btn {
+    display: inline-block;   /* evita que ocupe todo el ancho */
+    padding: 8px 16px;       /* espacio interno más pequeño */
+    font-size: 0.9rem;       /* reduce tamaño de letra */
+    background-color: #0077b6;
+    color: white;
+    border-radius: 6px;
+    text-decoration: none;
+    transition: background 0.3s;
+    cursor: pointer;
+}
+
+.btn:hover {
+    background-color: #0096c7;
+}
+
+/* =======================
+   VIDEOS
+   ======================= */
+.video-container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 2rem;
+}
+
+.video-container iframe {
+    width: 80%;
+    height: 500px;
+    max-width: 800px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.video-container p {
+    margin-top: 1rem;
+    font-size: 1rem;
+    color: #0077b6;
+}
+
+/* =======================
+   FOOTER
+   ======================= */
+footer {
+    background-color: #003d5b;
+    color: white;
+    text-align: center;
+    padding: 1rem;
+    margin-top: 2rem;
+}
+
+footer p {
+    font-size: 1rem;
+}
+
